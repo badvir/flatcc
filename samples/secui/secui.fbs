@@ -1,0 +1,19 @@
+// Example IDL file for our secui's schema.
+
+namespace secui.tams;
+
+struct ipaddress {
+  ip:[uint8:16];
+}
+
+table traffic_session {
+  mach_id: uint32;
+  src_ip: ipaddress;
+  src_port: uint16;
+  detail_msg: string;
+  dst_ip: ipaddress;
+  dst_port: uint16;
+}
+
+root_type traffic_session;
+
